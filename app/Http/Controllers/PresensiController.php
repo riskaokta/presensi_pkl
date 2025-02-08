@@ -233,9 +233,24 @@ class PresensiController extends Controller
         {
                 $id = $request->id;
                 $presensi = DB::table('presensi')->where('id', $id)
-                ->join('mahasiswa', 'presensi.npm', '=', 'mahasiswa.npm')
-                ->first();
+                        ->join('mahasiswa', 'presensi.npm', '=', 'mahasiswa.npm')
+                        ->first();
                 return view('presensi.showmap', compact('presensi'));
+        }
+
+        public function laporan()
+        {
+                $namabulan = ["", "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+                $mahasiswa = DB::table('mahasiswa')->orderBy('nama_mhs')->get();
+                return view('presensi.laporan', compact('namabulan','mahasiswa'));
+        }
+
+        public function cetaklaporan(Request $request){
+                $npm = $request->npm;
+                $bulan = $request->bulan;
+                $tahun = $request->tahun;
+
+                return view('presensi.cetaklaporan');
         }
 }
 

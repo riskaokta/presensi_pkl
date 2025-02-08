@@ -78,6 +78,35 @@
                                     class="nav-icon fas fa-desktop"></i>
                                 <p>Monitoring Presensi</p>
                             </a></li>
+
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-data">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
+                                        <path
+                                            d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+                                        <path d="M9 17v-4" />
+                                        <path d="M12 17v-1" />
+                                        <path d="M15 17v-2" />
+                                        <path d="M12 17v-1" />
+                                    </svg></i>
+                                <p>Laporan<i class="right fas fa-angle-left"></i></p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item"><a class="nav-link" href="/presensi/laporan"><i
+                                            class="far fa-circle nav-icon"></i>
+                                        <p>Presensi</p>
+                                    </a></li>
+                                <li class="nav-item"><a class="nav-link" href="#"><i class="far fa-circle nav-icon"></i>
+                                        <p>Rekap Presensi</p>
+                                    </a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
             </div>

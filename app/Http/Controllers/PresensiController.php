@@ -249,8 +249,15 @@ class PresensiController extends Controller
                 $npm = $request->npm;
                 $bulan = $request->bulan;
                 $tahun = $request->tahun;
+                $namabulan = ["", "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"]; 
+                $mahasiswa = DB::table('mahasiswa')->where('npm', $npm)->first();
 
-                return view('presensi.cetaklaporan');
+                $presensi = DB::table('presensi')
+                ->where('npm', $npm)
+                ->whereRaw('MONTH(tgl_presensi)="' . $bulan .'"')
+                ->whereRaw('YEAR(tgl_presensi)="' . $tahun .'"')
+                ->get();
+                return view('presensi.cetaklaporan', compact('bulan','tahun','namabulan','mahasiswa','presensi'));
         }
 }
 

@@ -47,7 +47,7 @@
                 <input type="file" name="lampiran" id="lampiran" class="form-control">
             </div>
             <div class="form-group">
-                <button class="btn w-100" style="background-color: maroon; color: white; border: none;">Kirim</button>
+                <button class="btn w-100" style="background-color: blue; color: white; border: none;">Kirim</button>
             </div>
         </form>
     </div>

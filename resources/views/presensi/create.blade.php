@@ -12,8 +12,8 @@
 </div>
 <!-- * App Header -->
 <style>
-    .webcame-capture,
-    .webcame-capture video {
+    .webcam-capture,
+    .webcam-capture video {
         display: inline-block;
         width: 100% !important;
         margin: auto;
@@ -72,7 +72,7 @@
     <script>
         Webcam.set({
             height: 480,
-            widht: 640,
+            width: 640,
             image_format: 'jpeg',
             jpeg_quality: 80
         });
@@ -99,56 +99,51 @@
         }
 
         $("#takeabsen").click(function (e) {
-            // let image;  //inisialisasi variabel
-            Webcam.snap(function (uri) {
-                image = uri;
-                //     console.log("Image Data:", image); //debugging gambar
-            });
-
             var lokasi = $("#lokasi").val();
             var catat_harian = $("#catat_harian").val();
-            // console.log("Lokasi:", lokasi); // Debugging lokasi
-            $.ajax({
-                type: 'POST',
-                url: '/presensi/store',
-                data: {
-                    _token: "{{ csrf_token() }}",
-                    image: image,
-                    lokasi: lokasi,
-                    catat_harian: catat_harian
-                },
-                cache: false,
-                success: function (respond) {
-                    var status = respond.split("|");
-                    // console.log(image); //debugging
-                    if (status[0] == "psucces") {
-                        // console.log("Response:", respond); // Debugging respons server
-                        Swal.fire({
-                            title: 'Berhasil!',
-                            text: status[1],  //ambil data array di PresensiController
-                            icon: 'success'
-                        })
-                        setTimeout(function () {
-                            location.href = '/dashboard';
-                        }, 3000);
-                        // setTimeOut("location.href='/dashboard'", 3000);
-                    } else {
-                        Swal.fire({
-                            title: 'Gagal!',
-                            text: 'Maaf Gagal Absen',
-                            icon: 'error',
-                            confirmButtonText: 'OK'
-                        });
-                    }
-                },
-                error: function (xhr, status, error) {
-                    console.error("Error Details:", xhr.responseText); // Debugging error
-                    alert('Ajax error: ' + error);
-                }
 
-                //ajax eror tidak mau take absen
-            });
+            // Ambil gambar dari webcam dan tunggu hingga selesai sebelum menjalankan AJAX
+            Webcam.snap(function (uri) {
+                var image = uri; // Pastikan image sudah berisi data sebelum dikirim ke server
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/presensi/store',
+                    data: {
+                        _token: "{{ csrf_token() }}",
+                        image: image, // ✅ Sekarang "image" dijamin sudah berisi data
+                        lokasi: lokasi,
+                        catat_harian: catat_harian
+                    },
+                    cache: false,
+                    success: function (respond) {
+                        var status = respond.split("|");
+                        if (status[0] == "psucces") {
+                            Swal.fire({
+                                title: 'Berhasil!',
+                                text: status[1],
+                                icon: 'success'
+                            });
+                            setTimeout(function () {
+                                location.href = '/dashboard';
+                            }, 3000);
+                        } else {
+                            Swal.fire({
+                                title: 'Gagal!',
+                                text: 'Maaf Gagal Absen',
+                                icon: 'error',
+                                confirmButtonText: 'OK'
+                            });
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error("Error Details:", xhr.responseText);
+                        alert('Ajax error: ' + error);
+                    }
+                });
+            }); // ✅ AJAX hanya dipanggil setelah `image` selesai dibuat
         });
+
 
     </script>
 @endpush

@@ -56,6 +56,7 @@ Route::post('presensi/storeizin', [PresensiController::class, 'storeizin']);
 //Dashbard Admin
 Route::get('/dashboardadmin', [DashboardController::class, 'dashboardadmin']);
 
+
 //Mahasiswa
 Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
 Route::post('/mahasiswa/store', [MahasiswaController::class, 'store']);
@@ -68,3 +69,5 @@ Route::post('/getpresensi', [PresensiController::class, 'getpresensi']);
 Route::post('/tampilkanpeta', [PresensiController::class, 'tampilkanpeta']);
 Route::get('/presensi/laporan', [PresensiController::class, 'laporan']);
 Route::post('/presensi/cetaklaporan', [PresensiController::class, 'cetaklaporan']);
+Route::get('/presensi/rekap', [PresensiController::class, 'rekap']);
+Route::post('/presensi/cetakrekap', [PresensiController::class, 'cetakrekap']);

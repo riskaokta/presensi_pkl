@@ -98,7 +98,7 @@
         }
 
         .btn-primary {
-            background-color: #007BFF;
+            background-color: blue;
             color: #fff;
             border: none;
             padding: 10px;
@@ -109,7 +109,7 @@
         }
 
         .btn-primary:hover {
-            background-color: #0056b3;
+            background-color: darkblue;
         }
 
         .or-divider {
@@ -162,26 +162,36 @@
 
 <body>
     <div class="login-container">
-        <h2>Login to your account</h2>
+        <h2>Login Admin Presensi PKL</h2>
         <form action="/prosesloginadmin" method="POST">
             @csrf
             <div class="form-group">
-                <label class="form-label">Email Address</label>
-                <input type="text" name="email" class="form-control" placeholder="your@email.com" autocomplete="off">
+                <label class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" placeholder="your@email.com" autocomplete="off">
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
                 <div class="password-wrapper">
                     <input type="password" id="password" name="password" placeholder="Your password" required>
-                    <a href="#" class="show-password">👁️</a>
+                    <a href="#" class="show-password"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-lock-password">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z" />
+                            <path d="M8 11v-4a4 4 0 1 1 8 0v4" />
+                            <path d="M15 16h.01" />
+                            <path d="M12.01 16h.01" />
+                            <path d="M9.02 16h.01" />
+                        </svg></a>
                 </div>
-                <a href="#" class="forgot-password">I forgot password</a>
+                <!-- <a href="#" class="forgot-password">I forgot password</a> -->
             </div>
-            <div class="form-group checkbox-group">
+            <!-- <div class="form-group checkbox-group">
                 <input type="checkbox" id="remember" name="remember">
                 <label for="remember">Remember me on this device</label>
-            </div>
-            <button type="submit" class="btn-primary">Sign in</button>
+            </div> -->
+            <button type="submit" class="btn-primary">Log in</button>
         </form>
     </div>
 </body>

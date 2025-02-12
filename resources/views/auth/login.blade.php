@@ -64,8 +64,8 @@
                         <div><a href="page-forgot-password.html" class="text-muted">Forgot Password?</a></div>
                     </div>
 
-                    <div class="form-button-group">
-                        <button type="submit" class="btn btn-maroon btn-block btn-lg"
+                    <div class="text-center mt-1">
+                        <button type="submit" class="btn btn-primary btn-block btn-lg"
                             style="background-color: maroon; color: white; border: none;">Log in</button>
                     </div>
 

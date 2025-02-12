@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
+
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -39,6 +40,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                         <a href="#" class="dropdown-item">Logout</a>
+                        
                     </div>
                 </li>
             </ul>
@@ -56,12 +58,15 @@
                         <li class="nav-item"><a class="nav-link" href="#"><i class="nav-icon fas fa-home"></i>
                                 <p>Dashboard</p>
                             </a></li>
-                        <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item"><a class="nav-link" href="/mahasiswa"><i class="nav-icon fas fa-user"></i>
+                                <p>Daftar Mahasiswa</p>
+                            </a></li>
+                        <!-- <li class="nav-item has-treeview">
+                            <a href="/mahasiswa" class="nav-link">
                                 <i class="nav-icon fas fa-user"></i>
-                                <p>Data Master<i class="right fas fa-angle-left"></i></p>
-                            </a>
-                            <ul class="nav nav-treeview">
+                                <p>Daftar Mahasiswa<i class="right fas fa-angle-left"></i></p>
+                            </a> -->
+                        <!-- <ul class="nav nav-treeview">
                                 <li class="nav-item"><a class="nav-link" href="/mahasiswa"><i
                                             class="far fa-circle nav-icon"></i>
                                         <p>Daftar Mahasiswa</p>
@@ -72,7 +77,7 @@
                                 <li class="nav-item"><a class="nav-link" href="#"><i class="far fa-circle nav-icon"></i>
                                         <p>Unduh Rekap Presensi</p>
                                     </a></li>
-                            </ul>
+                            </ul> -->
                         </li>
                         <li class="nav-item"><a class="nav-link" href="/presensi/monitoring"><i
                                     class="nav-icon fas fa-desktop"></i>
@@ -102,7 +107,8 @@
                                             class="far fa-circle nav-icon"></i>
                                         <p>Presensi</p>
                                     </a></li>
-                                <li class="nav-item"><a class="nav-link" href="#"><i class="far fa-circle nav-icon"></i>
+                                <li class="nav-item"><a class="nav-link" href="/presensi/rekap"><i
+                                            class="far fa-circle nav-icon"></i>
                                         <p>Rekap Presensi</p>
                                     </a></li>
                             </ul>
@@ -111,77 +117,10 @@
                 </nav>
             </div>
         </aside>
-        <!-- <div class="content-wrapper">
-            <section class="content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">Daftar Mahasiswa</h3>
-                                </div>
-                                <div class="card-body">
-                                    <table class="table table-bordered">
-                                        <thead>
-                                            <tr>
-                                                <th>NIM</th>
-                                                <th>Nama</th>
-                                                <th>Kelas</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>12345</td>
-                                                <td>Ahmad</td>
-                                                <td>A</td>
-                                            </tr>
-                                            <tr>
-                                                <td>67890</td>
-                                                <td>Budi</td>
-                                                <td>B</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">Presensi Mahasiswa</h3>
-                                </div>
-                                <div class="card-body">
-                                    <table class="table table-bordered">
-                                        <thead>
-                                            <tr>
-                                                <th>NIM</th>
-                                                <th>Nama</th>
-                                                <th>Status</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>12345</td>
-                                                <td>Ahmad</td>
-                                                <td>Hadir</td>
-                                            </tr>
-                                            <tr>
-                                                <td>67890</td>
-                                                <td>Budi</td>
-                                                <td>Absen</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div> -->
-        <!-- <footer class="main-footer text-center">
-            <strong>Copyright &copy; 2025 <a href="#">Admin Presensi</a>.</strong> All rights reserved.
-        </footer> -->
+        
+        <footer class="main-footer text-center">
+            <strong>Copyright &copy; 2025 <a href="#">by.Riska Oktafia</a>.</strong>
+        </footer>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -196,6 +135,8 @@
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
     @stack('myscript')
+
+
 </body>
 
 </html>

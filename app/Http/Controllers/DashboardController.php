@@ -13,6 +13,7 @@ class DashboardController extends Controller
         if (Auth::guard('mahasiswa')->check()) {
 
             $npm = Auth::guard('mahasiswa')->user()->npm;
+            $mahasiswa = Auth::guard('mahasiswa')->user(); 
 
             if (!empty($npm)) {
                 $bulanini = date("m") * 1;
@@ -64,7 +65,7 @@ class DashboardController extends Controller
                     $presensihariini->jam_out = null;
                 }
                 // dump($presensihariini);
-                return view('dashboard.dashboard', compact('presensihariini'));
+                return view('dashboard.dashboard', compact('presensihariini', 'mahasiswa'));
 
             } else {
                 return redirect('/');

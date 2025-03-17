@@ -39,7 +39,8 @@ class AuthController extends Controller
             return redirect('/dashboard');
         } else {
             // Redirect jika gagal login
-            echo "Gagal Login";
+            // echo "Gagal Login";
+            return redirect()->back()->with('error', 'Akun tidak ditemukan!');
         }
     }
 
@@ -57,8 +58,8 @@ class AuthController extends Controller
 
     public function proseslogoutadmin()
     {
-        if (Auth::guard('mahasiswa')->check()) {
-            Auth::guard('mahasiswa')->logout();
+        if (Auth::guard('user')->check()) {
+            Auth::guard('user')->logout();
             return redirect('/panel');
         }
     }

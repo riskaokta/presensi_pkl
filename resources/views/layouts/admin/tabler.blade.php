@@ -39,8 +39,8 @@
                         <i class="fas fa-user"></i> Admin
                     </a>
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                        <a href="#" class="dropdown-item">Logout</a>
-                        
+                        <a href="/panel" class="dropdown-item">Logout</a>
+
                     </div>
                 </li>
             </ul>
@@ -50,7 +50,7 @@
 
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <a href="#" class="brand-link">
-                <span class="brand-text font-weight-light">Admin Presensi</span>
+                <span class="brand-text font-weight-light">Admin Presensi PKL</span>
             </a>
             <div class="sidebar">
                 <nav class="mt-2">
@@ -79,10 +79,10 @@
                                     </a></li>
                             </ul> -->
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="/presensi/monitoring"><i
+                        <!-- <li class="nav-item"><a class="nav-link" href="/presensi/monitoring"><i
                                     class="nav-icon fas fa-desktop"></i>
                                 <p>Monitoring Presensi</p>
-                            </a></li>
+                            </a></li> -->
 
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
@@ -117,10 +117,7 @@
                 </nav>
             </div>
         </aside>
-        
-        <footer class="main-footer text-center">
-            <strong>Copyright &copy; 2025 <a href="#">by.Riska Oktafia</a>.</strong>
-        </footer>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -133,10 +130,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
 
     @stack('myscript')
 
 
 </body>
+
+<!-- Footer -->
+<footer class="main-footer text-center">
+    <strong>Copyright &copy; 2025 <a href="#">by.Riska Oktafia</a>.</strong>
+</footer>
 
 </html>

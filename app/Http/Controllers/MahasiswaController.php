@@ -41,7 +41,7 @@ class MahasiswaController extends Controller
         $password = Hash::make('12345');
         // $mahasiswa = DB::table('mahasiswa')->where('npm', $npm)->first();
         if ($request->hasFile('foto')) {
-            $foto = $npm . "." . $request->filr('foto')->getClientOriginalExtension();
+            $foto = $npm . "." . $request->file('foto')->getClientOriginalExtension();
         } else {
             $foto = null;
         }

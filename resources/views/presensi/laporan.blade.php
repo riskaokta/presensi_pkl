@@ -10,7 +10,7 @@
         </div>
     </div>
 </div>
-<div class="page-body">
+<div class="page-body"> 
     <div class="container-xl">
         <div class="row justify-content-center">
             <div class="col-md-6">

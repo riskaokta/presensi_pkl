@@ -29,6 +29,7 @@ Route::middleware(['guest:user'])->group(function () {
     })->name('loginadmin');
 
     Route::post('/prosesloginadmin', [AuthController::class, 'prosesloginadmin']);
+    Route::post('/panel', [AuthController::class, 'panel']); //baru buat
 });
 
 Route::get('/dashboard', [DashboardController::class, 'index']);

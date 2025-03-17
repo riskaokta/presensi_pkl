@@ -63,13 +63,13 @@
         </div>
 
         <!-- No. HP -->
-        <div class="form-group boxed" style="margin-bottom: 1px;">
+        <!-- <div class="form-group boxed" style="margin-bottom: 1px;">
             <label for="no_hp">No. HP</label>
             <div class="input-wrapper">
                 <input type="text" class="form-control" value="{{ $mahasiswa->nohp_mhs }}" name="no_hp" id="no_hp"
                     placeholder="No. HP" autocomplete="off">
             </div>
-        </div>
+        </div> -->
 
         <!-- Password -->
         <div class="form-group boxed" style="margin-bottom: 1px;">
@@ -81,10 +81,10 @@
         </div>
 
         <!-- File Upload with Smaller Square Icon -->
-        <div class="custom-file-upload" id="fileUpload1" style="text-align: center; margin-top: 1rem;">
+        <div class="custom-file-upload" id="fileUpload1" style="text-align: center; margin-top: 0rem;">
             <input type="file" name="foto" id="fileuploadInput" accept=".png, .jpg, .jpeg" style="display: none;">
             <label for="fileuploadInput"
-                style="display: inline-block; background-color: #f0f0f0; padding: 15px; cursor: pointer; border: 2px solid #007bff; border-radius: 5px;">
+                style="display: inline-block; background-color: #f0f0f0;  cursor: pointer; border: 2px solid #007bff; border-radius: 2px;">
                 <span>
                     <ion-icon name="cloud-upload-outline" role="img" class="md hydrated"
                         aria-label="cloud upload outline" style="font-size: 24px; color: #007bff;"></ion-icon>
